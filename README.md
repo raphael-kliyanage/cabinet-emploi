@@ -1,4 +1,3 @@
-=======
 # Cabinet emploi
 
 Website hosted with Angular and Springboot, this project is intended for educational use only.

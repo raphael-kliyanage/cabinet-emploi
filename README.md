@@ -13,11 +13,30 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 - [ ] [Create](https://gitlab.com/-/experiment/new_project_readme_content:de23e71bff0ec6794a86bc82d6ebbde9?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://gitlab.com/-/experiment/new_project_readme_content:de23e71bff0ec6794a86bc82d6ebbde9?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
 - [ ] [Add files using the command line](https://gitlab.com/-/experiment/new_project_readme_content:de23e71bff0ec6794a86bc82d6ebbde9?https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
+with https
 ```
 cd existing_repo
+git status
+git add *
+git commit -m "commit message"
 git remote add origin https://gitlab.com/raphael.kliyanage/cabinet-emploi.git
 git branch -M main
-git push -uf origin main
+git fetch -all
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+```
+
+with ssh
+```
+cd existing_repo
+git status
+git add *
+git commit -m "commit message"
+git remote add origin git@gitlab.com:raphael.kliyanage/cabinet-emploi.git
+git branch -M main
+git fetch -all
+git pull origin main --allow-unrelated-histories
+git push -u origin main
 ```
 
 ## Integrate with your tools

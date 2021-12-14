@@ -1,0 +1,12 @@
+.titre-centree {
+  text-align: center;
+  width: (device-width)/2;
+}
+
+ul {
+  list-style-type: square;
+}
+
+#titre-bleu {
+  color: blue;
+}

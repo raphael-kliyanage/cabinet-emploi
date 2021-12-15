@@ -6,8 +6,9 @@ export class User {
     useremail!: string;
     userphone!: number;
     userskype!: string;
-    userinterviewdate!: Date;
+    userinterviewdate!: string;
     usermessage!: string;
+    userfile!: string;
     //Both the type of interview are in a single object
     userinterview!: {
         ftf: boolean;

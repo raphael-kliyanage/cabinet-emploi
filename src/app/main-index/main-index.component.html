@@ -125,8 +125,8 @@
                 <p id="text" style="display:none">Agenda déroulant avec disponibilités</p>
             </div>
             <div class="col-md-6">
-                <button class="btn btn-primary">Nous contacter</button>
-                <p routerLink="/contacts" id="text" style="display:none">Nous contacter</p>
+                <button class="btn btn-primary" routerLink="/contacts">Nous contacter</button>
+                <p id="text" style="display:none">Nous contacter</p>
             </div>
         </div>
         <div class="row">
@@ -154,11 +154,11 @@
                         <!-- Communication Block -->
                         <div class="form-group">
                             <label for="inputEmail">Email *: </label>
-                            <input class="form-control" type="text" [(ngModel)] = "user.useremail" id="inputEmail" name="email" placeholder=" Email ">
+                            <input class="form-control" type="email" [(ngModel)] = "user.useremail" id="inputEmail" name="email" placeholder=" Email ">
                         </div>
                         <div class="form-group">
                             <label for="inputPhone">Téléphone *: </label>
-                            <input class="form-control" type="text" [(ngModel)]="user.userphone" id="inputPhone" name="phone" placeholder=" 0102030405 ">
+                            <input class="form-control" type="tel" [(ngModel)]="user.userphone" id="inputPhone" name="phone" placeholder=" 0102030405 ">
                         </div>
                         <div class="form-group">
                             <label for="inputIdSkype">Identifiant Skype *: </label>
@@ -167,25 +167,29 @@
                         <!-- Terms and Valid Com Block -->
                         <div class="form-group checkbox">
                             <label>Entretient souhaité *:</label>
-                            <mat-checkbox [(ngModel)]="user.userinterview.ftf" name="ftf"> En face à face</mat-checkbox>
-                            <mat-checkbox [(ngModel)]="user.userinterview.tel" name="tel"> Par téléphone</mat-checkbox>
-                            <mat-checkbox [(ngModel)]="user.userinterview.skyp" name="skyp"> Par Skype</mat-checkbox>
+                            <input type="checkbox" [(ngModel)]="user.userinterview.ftf" name="ftf"> En face à face 
+                            <input type="checkbox" [(ngModel)]="user.userinterview.tel" name="tel"> Par téléphone 
+                            <input type="checkbox" [(ngModel)]="user.userinterview.skyp" name="skyp"> Par Skype<br>
+                            <input type="datetime-local" [(ngModel)]="user.userinterviewdate" name="dateInterview">
                         </div>
                         <!-- Message Block -->
                         <div class="form-group">
+                            <label>CV :</label><br>
+                            <input type="file" [(ngModel)]="user.userfile" name="cv"><br>
                             <label>Message *: </label>
-                            <input class="form-control" type="text" [(ngModel)]="user.usermessage" id="inputMessage" name="message" placeholder=" Message ">
+                            <input class="form-control" maxlength="512" [(ngModel)]="user.usermessage" id="inputMessage" name="message" placeholder=" Message ">
+                            
                         </div>
                         <!--- Terms and conditions Block --->
                         <div class="form-group checkbox">
                             <label>
-                                <mat-checkbox [(ngModel)]="user.terms" name="terms" type="checkbox">Confirmer que vous avez bien lu les <a routerLink="#">Termes et Conditions</a></mat-checkbox>                                    
+                                <input type="checkbox" [(ngModel)]="user.terms" name="terms" type="checkbox">Confirmer que vous avez bien lu les <a routerLink="#">Termes et Conditions</a>                                     
                             </label>
                         </div>
                         <!--- Buttons Block --->
                         <div class="form-group">
-                            <button type="reset" class="btn btn-danger">Cancel</button>
-                            <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Submit</button>
+                            <button type="reset" class="btn btn-danger">Réinitialiser</button>
+                            <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Envoyer</button>
                         </div>
                     </fieldset>
                 </form>

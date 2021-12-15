@@ -1,3 +1,16 @@
 .article-gauche {
-  
+  width : 75%;
+  align-content: left;
+}
+
+.titre-centree {
+  color: blue;
+  width: 50%;
+  text-align: center;
+}
+
+#citation {
+  font-style: italic;
+  color: black;
+  ali
 }

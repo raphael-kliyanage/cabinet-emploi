@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { MainSponsorshipComponent } from './main-sponsorship/main-sponsorship.co
 import { MainAdvicesComponent } from './main-advices/main-advices.component';
 import { MainContactsComponent } from './main-contacts/main-contacts.component';
 import { MainLoginComponent } from './main-login/main-login.component';
+import { MainLogoComponent } from './main-logo/main-logo.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -32,11 +35,14 @@ import { MainLoginComponent } from './main-login/main-login.component';
     MainSponsorshipComponent,
     MainAdvicesComponent,
     MainContactsComponent,
-    MainLoginComponent
+    MainLoginComponent,
+    MainLogoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

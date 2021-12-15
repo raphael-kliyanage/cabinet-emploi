@@ -41,7 +41,10 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
     RouterModule,
+=======
+>>>>>>> e34e359f20937c13bd069a0552d6d1766b537dcf
     FormsModule
   ],
   providers: [],

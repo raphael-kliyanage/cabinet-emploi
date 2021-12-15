@@ -6,11 +6,16 @@
 .titre-centree {
   color: blue;
   width: 50%;
-  text-align: center;
+  align-content: left;
+  text-align: left;
 }
 
 #citation {
   font-style: italic;
   color: black;
-  ali
+  text-align: center;
+}
+
+ul {
+  list-style-type: square;
 }

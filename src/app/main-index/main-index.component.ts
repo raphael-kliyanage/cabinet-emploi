@@ -28,6 +28,7 @@ export class MainIndexComponent implements OnInit {
       userskype:"",
       userinterviewdate:"",
       usermessage:"",
+      userfile:"",
       userinterview: { ftf: false, tel: false, skyp: false },
       terms: false
     });

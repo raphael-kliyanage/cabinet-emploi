@@ -1,9 +1,10 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/navbar">Navbar</a>
-  <a routerLink="/advices">Conseils</a>
-  <a routerLink="/navbar">Navbar</a>
-  <a routerLink="/navbar">Navbar</a>
-  <a routerLink="/navbar">Navbar</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="jumbotron text-center">
+  <h1 style="color: blue;">{{title}}</h1>
+  <p><b>Cabinet d’accompagnement au </b><b style="color: orange;"> retour à l’emploi</b></p>
+</div>
+<div class="container-fluid">
+  <app-top-nav></app-top-nav>
+  <app-main-logo></app-main-logo>
+  <router-outlet></router-outlet>
+  <app-bottom-foot></app-bottom-foot>
+</div> 

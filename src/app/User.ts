@@ -21,8 +21,4 @@ export class User {
         //Constructor initialization
         Object.assign(this, values);
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e34e359f20937c13bd069a0552d6d1766b537dcf

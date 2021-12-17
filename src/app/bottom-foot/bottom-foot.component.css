@@ -1,0 +1,42 @@
+footer{
+    background-color: white;
+    /*border-style: solid;*/
+    text-align: center;
+}
+
+.footbar{
+    position: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-white-rgb),var(--bs-bg-opacity))!important;
+}
+
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: revert;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+a{
+    color: black;
+    text-decoration: underline;
+}
+
+li{
+    border-right: black solid;
+}
+
+.black-box{
+    color: white;
+    background-color: black;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 2px;
+}

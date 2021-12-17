@@ -177,7 +177,7 @@
                             <label>CV :</label><br>
                             <input type="file" [(ngModel)]="user.userfile" name="cv"><br>
                             <label>Message *: </label>
-                            <input class="form-control" maxlength="512" [(ngModel)]="user.usermessage" id="inputMessage" name="message" placeholder=" Message ">
+                            <textarea class="form-control" maxlength="512" [(ngModel)]="user.usermessage" id="inputMessage" name="message" placeholder=" Message "></textarea>
                             
                         </div>
                         <!--- Terms and conditions Block --->
@@ -194,7 +194,9 @@
                     </fieldset>
                 </form>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="fakeimg">Fake image</div>
+            </div>
         </div>
     </div>
 </div>

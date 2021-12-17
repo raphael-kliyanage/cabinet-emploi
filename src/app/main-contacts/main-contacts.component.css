@@ -1,0 +1,31 @@
+.article-gauche {
+  width: 75%;
+  align-content: left;
+}
+
+.titre-centree {
+  color: blue;
+  width: 50%;
+  align-content: left;
+  text-align: left;
+}
+
+#citation {
+  font-style: italic;
+  color: black;
+  text-align: center;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.image {
+  width: 25%;
+  align-content: right;
+}
+
+.formulaire-commentaire {
+
+}
+

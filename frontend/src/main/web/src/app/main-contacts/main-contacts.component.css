@@ -1,0 +1,52 @@
+.article-gauche {
+  width: 75%;
+}
+
+.titre-centree {
+  color: blue;
+  text-align: center;
+}
+
+#titre {
+  color: blue;
+}
+
+#citation {
+  font-style: italic;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.image {
+  position: absolute;
+  right: 60px;
+  width: 280px;
+  height: 56px;
+}
+
+
+/* resize images */
+ @media (width <= 900px) {
+   .image {
+     position: absolute;
+     right: 60px;
+     width: 150px;
+     height: 56px;
+     padding-top: 10%;
+   }
+ }
+
+ .image img {
+  width: 100%;
+  height: auto;
+}
+
+.formulaire-commentaire {
+
+}

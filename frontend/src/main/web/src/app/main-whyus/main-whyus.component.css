@@ -1,0 +1,10 @@
+.fakeimg{
+    height: 20px;
+    background: blue;
+}
+img{
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    border-radius: 50%!important;
+}

@@ -1,0 +1,202 @@
+<div class="" id="index">
+    <!-- Page 3 PDF-->
+    <p style="background-color: blue; color: orange;text-align: center;">
+        <b>
+            BATIR SEREINEMENT ET RAPIDEMENT SA NOUVELLE VIE PROFESSIONNELLE !
+            <br>
+            Des prestations sur-mesure, haut de gamme, avec un service automatisé de diffusion de CV
+        </b>
+    </p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <ul>
+                    <li>
+                        Votre emploi ne vous convient pas et vous ne savez pas pour quel métier vous êtes fait(e) ?
+                    </li>
+                    <li>
+                        Vous avez plusieurs compétences et souhaitez savoir pour quel métier vous avez le plus de chances d’être recruté(e) ?
+                    </li>
+                    <li>
+                        Vous avez des difficultés à rédiger un CV et une lettre de motivation attractifs ?
+                    </li>
+                    <li>
+                        Trouver les coordonnées des recruteurs vous prend trop de temps ?
+                    </li>
+                    <li>
+                        Vous avez envoyé de nombreux CV et n’avez pratiquement obtenu aucun entretien ?
+                    </li>
+                    <li>
+                        Vous n’êtes pas à l’aise en entretien de recrutement ?
+                    </li>
+                    <li>
+                        Vos entretiens n’aboutissent pas à des propositions d’emploi ?
+                    </li>
+                    <li>
+                        Vous avez besoin de trouver un emploi au plus vite ?
+                    </li>
+                    <li>
+                        Vous souhaitez être accompagné(e) par un(e) professionnel(le) expérimenté(e) tout au long de votre recherche d’emploi ?
+                    </li>
+                    <li>
+                        ...
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                Vidéo :
+                <div class="well"></div>
+            </div>
+        </div>
+    </div>
+    <p style="background-color: blue; color: orange;text-align: center;">
+        <b>
+            Pas de panique, nous pouvons vous aider ! 
+        </b>
+    </p>
+    <!-- Page 4 PDF-->
+    <div class="container-fluid">
+        <p style="text-align:center;color:blue;">
+            <b>
+                Pourquoi faire appel à nos services ?
+            </b>
+        </p>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="well"></div>
+                </div>
+                <div class="col-md-8">
+                    <b>L’expérience :</b> depuis 2007, nous avons aidé des centaines de candidats ; 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="well"></div>
+                </div>
+                <div class="col-md-8">
+                    <b>L’expertise :</b> nos consultants sont tous des professionnel(le)s possédant au moins 10 années d’expérience dans le recrutement ;
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="well"></div>
+                </div>
+                <div class="col-md-8">
+                    <b>L’implication : </b> pour vous satisfaire, la majorité de nos prestations sont d’une durée illimitée ou garanties (remboursement en cas d’absence de contact avec des recruteurs) ; nous nous adaptons à vos contraintes géographiques et horaires ; nos consultants s’investissent pleinement (rédigent votre curriculum vitae, votre lettre de motivation, votre présentation...)... ;
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="well"></div>
+                </div>
+                <div class="col-md-8">
+                    <b>Des services efficaces : </b> nous pouvons vous rendre opérationnel(le)s dans votre recherche d’emploi en seulement 1 mois ; 100 % des personnes dont nous avons réécrit et diffusé le CV ont été rapidement recontactées par des recruteurs; ... ; 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="well"></div>
+                </div>
+                <div class="col-md-8">
+                    <b>
+                        Une base de données de plus de de 190.000 recruteurs qualifiés...
+                    </b>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="well"></div>
+        </div>
+        <p style="text-align:center;color:blue;">
+            <b>
+                Ils nous ont fait confiance et sont pleinement satisfaits !
+            </b>
+        </p>
+    </div>
+    <!-- Page 5 PDF-->
+    <div class="container-fluid">
+        <p style="color: blue;text-align: center;"><b>
+            Nous pouvons vous donner un avis gratuit sur l’efficacité de votre CV ! <br>Ne perdez pas de temps. Contactez-nous vite !
+        </b></p>
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-primary">Prendre rendez-vous </button>
+                <p id="text" style="display:none">Agenda déroulant avec disponibilités</p>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-primary" routerLink="/contacts">Nous contacter</button>
+                <p style="display:none">Nous contacter</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <form class="form-horizontal" #signupForm="ngForm">
+                    <fieldset>
+                        <legend>Message</legend>
+                        <!-- User Block -->
+                        <div class="form-group">
+                            <label for="inputLastName">Nom *: </label>
+                            <input class="form-control" type="text" [(ngModel)]="user.userlastname" id="inputLastName" name="lastname" placeholder=" Nom de Famille ">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputFirstName">Prénom *: </label>
+                            <input class="form-control" type="text" [(ngModel)]="user.userfirstname" id="inputFirstName" name="firstname" placeholder=" Prénom ">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputWorkFunction">Fonction : </label>
+                            <select class="form-control" id="inputWorkFunction" [(ngModel)]="user.userworkfunction" name="workfunction">
+                                <option *ngFor="let wf of workfunction" [value]="wf">
+                                    {{wf}}
+                                </option>
+                            </select>
+                        </div>
+                        <!-- Communication Block -->
+                        <div class="form-group">
+                            <label for="inputEmail">Email *: </label>
+                            <input class="form-control" type="email" [(ngModel)] = "user.useremail" id="inputEmail" name="email" placeholder=" Email ">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhone">Téléphone *: </label>
+                            <input class="form-control" type="tel" [(ngModel)]="user.userphone" id="inputPhone" name="phone" placeholder=" 0102030405 ">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputIdSkype">Identifiant Skype *: </label>
+                            <input class="form-control" type="text" [(ngModel)]="user.userskype" id="inputIdSkype" name="skype" placeholder=" IdSkype ">
+                        </div>
+                        <!-- Terms and Valid Com Block -->
+                        <div class="form-group checkbox">
+                            <label>Entretient souhaité *:</label>
+                            <input type="checkbox" [(ngModel)]="user.userinterview.ftf" name="ftf"> En face à face 
+                            <input type="checkbox" [(ngModel)]="user.userinterview.tel" name="tel"> Par téléphone 
+                            <input type="checkbox" [(ngModel)]="user.userinterview.skyp" name="skyp"> Par Skype<br>
+                            <input type="datetime-local" [(ngModel)]="user.userinterviewdate" name="dateInterview">
+                        </div>
+                        <!-- Message Block -->
+                        <div class="form-group">
+                            <label>CV :</label><br>
+                            <input type="file" [(ngModel)]="user.userfile" name="cv"><br>
+                            <label>Message *: </label>
+                            <textarea class="form-control" maxlength="512" [(ngModel)]="user.usermessage" id="inputMessage" name="message" placeholder=" Message "></textarea>
+                            
+                        </div>
+                        <!--- Terms and conditions Block --->
+                        <div class="form-group checkbox">
+                            <label>
+                                <input type="checkbox" [(ngModel)]="user.terms" name="terms" type="checkbox">Confirmer que vous avez bien lu les <a routerLink="#">Termes et Conditions</a>                                     
+                            </label>
+                        </div>
+                        <!--- Buttons Block --->
+                        <div class="form-group">
+                            <button type="reset" class="btn btn-danger">Réinitialiser</button>
+                            <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Envoyer</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div class="fakeimg">Fake image</div>
+            </div>
+        </div>
+    </div>
+</div>

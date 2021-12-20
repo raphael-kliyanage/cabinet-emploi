@@ -1,129 +1,144 @@
-<h3>Contact</h3>
+<div id="Contact">
+  <h3 class="text-center">Contact</h3>
+  <!-- Page 15 -->
+  <div class="container">
+    <div class="row">
+      <!-- Formulaire Contact -->
+      <div class="col-md-4">
+        <div class="formulaire-rdv">
+          <h4>Pour nous téléphoner :</h4>
+          <p>01 XX XX XX XX</p>
+      
+          <h4>Pour prendre rendez-vous :</h4>
+          <p>Le premier rendez-vous est gratuit et sans engagement !</p>
+      
+          <form class="form-horizontal" #signupForm="ngForm" action="http://localhost:8020" method="post"> <!-- on cible le service tomcat backend avec localhost:8020-->
+            <h6>Agenda déroulant avec disponibilités.</h6>
+            <input type="date" name="date" [(ngModel)]="user.userinterviewdate"><br><br>
+            <fieldset>
+              <legend></legend>
+              <!-- User Block -->
+              <div class="form-group">
+                <label for="inputLastName">Nom *: </label>
+                <input class="form-control" type="text" [(ngModel)]="user.userlastname" id="inputLastName" name="nom" placeholder=" Nom de Famille " required>
+              </div>
+              <div class="form-group">
+                <label for="inputFirstName">Prénom *: </label>
+                <input class="form-control" type="text" [(ngModel)]="user.userfirstname" id="inputFirstName" name="prenom" placeholder=" Prénom " required>
+              </div>
+              <div class="form-group">
+                <label for="inputWorkFunction">Fonction : </label>
+                <select class="form-control" id="inputWorkFunction" [(ngModel)]="user.userworkfunction" name="fonction">
+                  <option *ngFor="let wf of workfunction" [value]="wf">
+                    {{wf}}
+                  </option>
+                </select>
+              </div>
+              <!-- Communication Block -->
+              <div class="form-group">
+                <label for="inputEmail">Email *: </label>
+                <input class="form-control" type="email" [(ngModel)] = "user.useremail" id="inputEmail" name="email" placeholder=" Email " required>
+              </div>
+              <div class="form-group">
+                <label for="inputPhone">Téléphone *: </label>
+                <input class="form-control" type="tel" [(ngModel)]="user.userphone" id="inputPhone" name="telephone" placeholder=" 0102030405 " required>
+              </div>
+              <div class="form-group">
+                <label for="inputIdSkype">Identifiant Skype : </label>
+                <input class="form-control" type="text" [(ngModel)]="user.userskype" id="inputIdSkype" name="skype" placeholder=" IdSkype ">
+              </div>
+              <!-- Terms and Valid Com Block -->
+              <div class="form-group checkbox">
+                <label>Entretient souhaité *:</label><br>
+                <input type="checkbox" [(ngModel)]="user.userinterview.ftf" name="ftf"> En face à face 
+                <input type="checkbox" [(ngModel)]="user.userinterview.tel" name="tel"> Par téléphone 
+                <input type="checkbox" [(ngModel)]="user.userinterview.skyp" name="skyp"> Par Skype<br>
+              </div>
+              <!-- Message Block -->
+              <div class="form-group">
+                <label>CV :</label><br>
+                <input type="file" [(ngModel)]="user.userfile" name="cv" required><br>
+                <label>Message *: </label>
+                <textarea class="form-control" maxlength="512" [(ngModel)]="user.usermessage" id="inputMessage" name="message" placeholder=" Message " required></textarea>
+          
+              </div>
+              <!--- Terms and conditions Block --->
+              <div class="form-group checkbox">
+                <label>
+                  <input type="checkbox" [(ngModel)]="user.terms" name="terms" type="checkbox"> Confirmer que vous avez bien lu les <a routerLink="#">Termes et Conditions</a>                                     
+                </label>
+              </div>
+              <!--- Buttons Block --->
+              <div class="form-group">
+                <button type="reset" class="btn btn-danger">Réinitialiser</button>
+                <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Envoyer</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <!-- Pour nous Ecrire -->
+      <div class="col-md-4">
+        <div class="formulaire-commentaire">
+          <h4>Pour nous écrire :</h4>
+        </div>
+      </div>
+      <!-- Image -->
+      <div class="col-md-4">
+        <img src="#" alt="ImgContact">
+      </div>
+    </div>
+  </div>
+  <!-- Page 16 -->
+  <div class="titre-centree">
+    <h3>Bilan professionnel</h3>
+    <h5 id="citation">« La réflexion doit précéder l'action »</h5>
+  </div>
+  <article class="article-gauche">
+    <h4>Pourquoi faire un bilan professionnel ?</h4>
+    <ul>
+      <li>Mieux connaître ses aptitudes et compétences.</li>
+      <li>Prendre conscience de ses atouts et freins pour être acteur de son évolution.</li>
+      <li>Construire un projet professionnel cohérent avec le marché du travail.</li>
+      <li>Appréhender une reconversion dans un autre métier ou secteur.</li>
+    </ul>
+  
+    <h4>Notre méthode :</h4>
+    <ol>
+      <li>Réalisation de test(s) de personnalité.</li>
+      <li>Analyse des résultats.</li>
+      <li>Étude de votre parcours professionnel, de vos compétences, de vos contraintes et de vos objectifs.</li>
+      <li>Accompagnement dans la recherche du ou des postes qui vous correspondent.</li>
+      <li>Définition de votre projet professionnel.</li>
+      <li>Étude de vos forces et faiblesses par rapport à votre projet professionnel et aux besoins du marché.</li>
+      <li>Rédaction de votre plan d'action.</li>
+    </ol>
+  </article>
+  <!-- Page 17 -->
+  <h3 class="titre-centree">Diffusion aux recruteurs du CV et de la lettre de motivation</h3>
+  <article class="article-gauche">
+    <h5 id="citation">"Envoyer « spontanément » son CV à des recruteurs est le moyen le plus efficace pour trouver un emploi"</h5>
 
-<div class="formulaire-rdv">
-    <h4>Pour nous téléphoner :</h4>
-    <p>01 XX XX XX XX</p>
-
-    <h4>Pour prendre rendez-vous :</h4>
-    <p>Le premier rendez-vous est gratuit et sans engagement !</p>
-
-    <form class="" action="http://localhost:8020" method="post">  <!-- on cible le service tomcat backend avec localhost:8020-->
-      <h6>Agenda déroulant avec disponibilités.</h6>
-      <input type="date" name="date"><br><br>
-
-      Prénom* :<input class="form" type="text" name="prenom" required><br>
-      Nom* :<input type="text" name="nom" required><br>
-      Fonction :<input type="text" name="fonction">
-      Email :<input type="email" name="email"><br>
-      Téléphone* :<input type="phone" name="telephone" required><br>
-      Identifiant Skype :<input type="text" name="skype"><br>
-    </form>
-</div>
-
-<div class="formulaire-commentaire">
-  <h4>Pour nous écrire :</h4>
-</div>
-
-<div class="titre-centree">
-  <h3>Bilan professionnel</h3>
-  <h5 id="citation">« La réflexion doit précéder l'action »</h5>
-</div>
-<article class="article-gauche">
-  <h4>Pourquoi faire un bilan professionnel ?</h4>
-  <ul>
-    <li>Mieux connaître ses aptitudes et compétences.</li>
-    <li>Prendre conscience de ses atouts et freins pour être acteur de son évolution.</li>
-    <li>Construire un projet professionnel cohérent avec le marché du travail.</li>
-    <li>Appréhender une reconversion dans un autre métier ou secteur.</li>
-  </ul>
-
-  <h4>Notre méthode :</h4>
-  <ol>
-    <li>Réalisation de test(s) de personnalité.</li>
-    <li>Analyse des résultats.</li>
-    <li>Étude de votre parcours professionnel, de vos compétences, de vos contraintes et de vos objectifs.</li>
-    <li>Accompagnement dans la recherche du ou des postes qui vous correspondent.</li>
-    <li>Définition de votre projet professionnel.</li>
-    <li>Étude de vos forces et faiblesses par rapport à votre projet professionnel et aux besoins du marché.</li>
-    <li>Rédaction de votre plan d'action.</li>
-  </ol>
-</article>
-
-<h3 class="titre-centree">Valorisation du CV et de la lettre de motivation</h3>
-<article class="article-gauche">
-  <h5 id="citation">"Si votre CV n'est pas clair, attractif et ne contient pas toutes les informations dont les recruteurs ont besoin : poste recherché,
-disponibilité, mobilité, atouts concurrentiels..., il aura peu de chance d'être retenu."</h5>
-
-  <h4>Pourquoi faire appel à un professionnel ? :</h4>
-  <ul>
-    <li>Pour valoriser vos compétences et expériences.</li>
-    <li>Pour obtenir un CV complet et attractif.</li>
-    <li>Pour augmenter vos chances d’obtenir un entretien ?</li>
-  </ul>
-
-  <h4>Notre méthode :</h4>
-  <p>Un consultant expérimenté :</p>
-  <ol>
-    <li>S'entretient avec vous pour comprendre votre parcours professionnel ainsi que vos objectifs.</li>
-    <li>Définit vos atouts concurrentiels (savoir-faire & savoir-être) et les mots clés importants pour le(s) poste(s)
-recherché(s).</li>
-    <li>Réécrit et met en forme, avec vous, votre CV et votre lettre de motivation.</li>
-    <li>Vous aide à sélectionner une de vos photos et à la rendre plus attractive (facultatif).</li>
-    <li>Vous remet les documents dans les formats Word et Pdf.</li>
-  </ol>
-  Cette prestation dure en moyenne 7 h 30 (réparties généralement en 3 réunions).
-</article>
-
-<h3 class="titre-centree">Préparation aux entretiens de recrutement</h3>
-<article class="article-gauche">
-  <h5 id="citaion">"Un entretien de recrutement, ça se prépare«</h5>
-
-  <h4>Pourquoi se préparer aux entretiens ? :</h4>
-  <ul>
-    <li>Pour se sentir plus à l’aise.</li>
-    <li>Pour comprendre les attentes des recruteurs.</li>
-    <li>Pour améliorer sa force de persuasion.</li>
-    <li>Pour augmenter ses chances d’être recruté(e).</li>
-  </ul>
-
-  <h4>Notre méthode :</h4>
-  <p>Une formation individuelle, théorique et pratique :</p>
-  <ol>
-    <li>Entretien de recrutement et analyse.</li>
-    <li>Conseils pour réussir son entretien de recrutement.</li>
-    <li>Comment se présenter de façon claire, structurée et synthétique (avec rédaction de votre présentation).</li>
-    <li>Comment répondre aux questions du recruteur (avec rédaction des principales questions et réponses adaptées).</li>
-    <li>Mise en situation et conseils (jusqu’à satisfaction).</li>
-  </ol>
-</article>
-
-<h3 class="titre-centree">Diffusion aux recruteurs du CV et de la lettre de motivation</h3>
-<article class="article-gauche">
-  <h5 id="citation">"Envoyer « spontanément » son CV à des recruteurs est le moyen le plus efficace pour trouver un emploi"</h5>
-
-  <h4>Pourquoi faire diffuser mon CV ? :</h4>
-  <ul>
-    <li>Cibler le marché caché de l’emploi (qui représente 70% des postes à pourvoir).</li>
-    <li>Gagner un temps considérable.</li>
-    <li>Bénéficier d’un logiciel professionnel d’emailing afin que vos candidatures parviennent à un maximum de recruteurs.</li>
-  </ul>
-
-  <h4>Notre méthode :</h4>
-  <ol>
-    <li>Création d'une adresse mail pour la diffusion de votre CV et de votre lettre de motivation et la réception des réponses des recruteurs.</li>
-    <li>Préparation d'une base d'emails "sur mesure" (à concurrence de 20.000 emails) à partir de nos fichiers : Base <b>"Cabinets de
-recrutement"</b> ; Base <b>"Management de transition"</b> ; Base <b>"Recruteurs"</b>* (<b>Plus de 190.000 recruteurs qualifiés</b> : entreprises,
-administrations, associations...).</li>
-    <li>Définition du planning d'envoi : nombre de courriels à diffuser, date(s) de diffusion.</li>
-    <li>Paramétrage de notre serveur de diffusion et validation par vos soins.</li>
-    <li>Diffusion (qui peut être répartie sur 2 mois) et contrôle de l'emailing.</li>
-  </ol>
-  <p>Bases complémentaires : ‘’administrateurs & mandataires judiciaires’’ ; ‘’experts comptables’’ ; ‘’fonds d'investissement’’…</p>
-  <p><i>(*) à partir de leurs offres d'emploi : intitulé du poste, zone géographique, type de contrat.</i></p>
-</article>
-
-<h3 class="titre-centree">Formation à LinkedIn</h3>
-<article class="article-gauche">
+    <h4>Pourquoi faire diffuser mon CV ? :</h4>
+    <ul>
+      <li>Cibler le marché caché de l’emploi (qui représente 70% des postes à pourvoir).</li>
+      <li>Gagner un temps considérable.</li>
+      <li>Bénéficier d’un logiciel professionnel d’emailing afin que vos candidatures parviennent à un maximum de recruteurs.</li>
+    </ul>
+    <h4>Notre méthode :</h4>
+    <ol>
+      <li>Création d'une adresse mail pour la diffusion de votre CV et de votre lettre de motivation et la réception des réponses des recruteurs.</li>
+      <li>Préparation d'une base d'emails "sur mesure" (à concurrence de 20.000 emails) à partir de nos fichiers : Base <b>"Cabinets recrutement"</b> ; Base <b>"Management de transition"</b> ; Base <b>"Recruteurs"</b>* (<b>Plus de 190.000 recruteurs qualifiés</b> : entreprises, administrations, associations...).</li>
+      <li>Définition du planning d'envoi : nombre de courriels à diffuser, date(s) de diffusion.</li>
+      <li>Paramétrage de notre serveur de diffusion et validation par vos soins.</li>
+      <li>Diffusion (qui peut être répartie sur 2 mois) et contrôle de l'emailing.</li>
+    </ol>
+    <p>Bases complémentaires : ‘’administrateurs & mandataires judiciaires’’ ; ‘’experts comptables’’ ; ‘’fonds d'investissement’’…</p>
+    <p><i>(*) à partir de leurs offres d'emploi : intitulé du poste, zone géographique, type de contrat.</i></p>
+  </article>
+  <!-- Page 18 -->
+  <h3 class="titre-centree">Formation à LinkedIn</h3>
+  <article class="article-gauche">
   <h5 id="citation">"La majorité des recruteurs font des recherches sur Internet avant de recruter«</h5>
 
   <p>Linkedin est un réseau professionnel comprenant plus de 750 millions de membres au niveau international.</p>
@@ -144,10 +159,10 @@ l’APEC</sub></li>
     <li>Création ou optimisation de votre profil LinkedIn.</li>
     <li>Questions / Réponses.</li>
   </ol>
-</article>
-
-<h3 class="titre-centree">Outplacement - Inplacement individuel</h3>
-<article class="titre-centree">
+  </article>
+  <!-- Page 19 -->
+  <h3 class="titre-centree">Outplacement - Inplacement individuel</h3>
+  <article class="titre-centree">
   <p>
     L’<b>outplacement</b> consiste à être accompagné, conseillé et formé par un professionnel pour retrouver plus rapidement un emploi en dehors de votre organisation.
     L’<b>inplacement</b> consiste également à être accompagné, conseillé et formé par un professionnel à l’exception que l’objectif est de retrouver un emploi au sein de votre
@@ -181,4 +196,5 @@ l’APEC</sub></li>
     <li>Suivi, analyse des actions et des résultats, conseil.</li>
   </ol>
   <p>Nous utilisons notre important réseau relationnel pour faciliter vos démarches.</p>
-</article>
+  </article>
+</div>

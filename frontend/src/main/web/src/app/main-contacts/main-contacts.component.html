@@ -1,29 +1,92 @@
 <h3 class="titre-centree">Contact</h3>
-<span class="image">
-  <img src="../../assets/img/contacts01.png" alt="contacts01">
-</span>
-<div class="formulaire-rdv">
-    <h4 id="titre">Pour nous téléphoner :</h4>
-    <p>01 XX XX XX XX</p>
+<!-- Page 15 -->
+<div class="container">
+    <div class="row">
+      <!-- Formulaire Contact -->
+      <div class="col-md-4">
+        <div class="formulaire-rdv">
+          <h4>Pour nous téléphoner :</h4>
+          <p>01 XX XX XX XX</p>
 
-    <h4 id="titre">Pour prendre rendez-vous :</h4>
-    <p>Le premier rendez-vous est gratuit et sans engagement !</p>
+          <h4>Pour prendre rendez-vous :</h4>
+          <p>Le premier rendez-vous est gratuit et sans engagement !</p>
 
-    <form class="" action="http://localhost:8020" method="post">  <!-- on cible le service tomcat backend avec localhost:8020-->
-      <h6>Agenda déroulant avec disponibilités.</h6>
-      <input type="date" name="date"><br><br>
+          <form class="form-horizontal" #signupForm="ngForm" action="http://localhost:8020" method="post"> <!-- on cible le service tomcat backend avec localhost:8020-->
+            <h6>Agenda déroulant avec disponibilités.</h6>
+            <input type="date" name="date" [(ngModel)]="user.userinterviewdate"><br><br>
+            <fieldset>
+              <legend></legend>
+              <!-- User Block -->
+              <div class="form-group">
+                <label for="inputLastName">Nom *: </label>
+                <input class="form-control" type="text" [(ngModel)]="user.userlastname" id="inputLastName" name="nom" placeholder=" Nom de Famille " required>
+              </div>
+              <div class="form-group">
+                <label for="inputFirstName">Prénom *: </label>
+                <input class="form-control" type="text" [(ngModel)]="user.userfirstname" id="inputFirstName" name="prenom" placeholder=" Prénom " required>
+              </div>
+              <div class="form-group">
+                <label for="inputWorkFunction">Fonction : </label>
+                <select class="form-control" id="inputWorkFunction" [(ngModel)]="user.userworkfunction" name="fonction">
+                  <option *ngFor="let wf of workfunction" [value]="wf">
+                    {{wf}}
+                  </option>
+                </select>
+              </div>
+              <!-- Communication Block -->
+              <div class="form-group">
+                <label for="inputEmail">Email *: </label>
+                <input class="form-control" type="email" [(ngModel)] = "user.useremail" id="inputEmail" name="email" placeholder=" Email " required>
+              </div>
+              <div class="form-group">
+                <label for="inputPhone">Téléphone *: </label>
+                <input class="form-control" type="tel" [(ngModel)]="user.userphone" id="inputPhone" name="telephone" placeholder=" 0102030405 " required>
+              </div>
+              <div class="form-group">
+                <label for="inputIdSkype">Identifiant Skype : </label>
+                <input class="form-control" type="text" [(ngModel)]="user.userskype" id="inputIdSkype" name="skype" placeholder=" IdSkype ">
+              </div>
+              <!-- Terms and Valid Com Block -->
+              <div class="form-group checkbox">
+                <label>Entretient souhaité *:</label><br>
+                <input type="checkbox" [(ngModel)]="user.userinterview.ftf" name="ftf"> En face à face
+                <input type="checkbox" [(ngModel)]="user.userinterview.tel" name="tel"> Par téléphone
+                <input type="checkbox" [(ngModel)]="user.userinterview.skyp" name="skyp"> Par Skype<br>
+              </div>
+              <!-- Message Block -->
+              <div class="form-group">
+                <label>CV :</label><br>
+                <input type="file" [(ngModel)]="user.userfile" name="cv" required><br>
+                <label>Message *: </label>
+                <textarea class="form-control" maxlength="512" [(ngModel)]="user.usermessage" id="inputMessage" name="message" placeholder=" Message " required></textarea>
 
-      Prénom* :<input class="form" type="text" name="prenom" required><br>
-      Nom* :<input type="text" name="nom" required><br>
-      Fonction :<input type="text" name="fonction">
-      Email :<input type="email" name="email"><br>
-      Téléphone* :<input type="phone" name="telephone" required><br>
-      Identifiant Skype :<input type="text" name="skype"><br>
-    </form>
-</div>
-
-<div class="formulaire-commentaire">
-  <h4 id="titre">Pour nous écrire :</h4>
+              </div>
+              <!--- Terms and conditions Block --->
+              <div class="form-group checkbox">
+                <label>
+                  <input type="checkbox" [(ngModel)]="user.terms" name="terms" type="checkbox"> Confirmer que vous avez bien lu les <a routerLink="#">Termes et Conditions</a>
+                </label>
+              </div>
+              <!--- Buttons Block --->
+              <div class="form-group">
+                <button type="reset" class="btn btn-danger">Réinitialiser</button>
+                <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Envoyer</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <!-- Pour nous Ecrire -->
+      <div class="col-md-4">
+        <div class="formulaire-commentaire">
+          <h4>Pour nous écrire :</h4>
+        </div>
+      </div>
+      <!-- Image -->
+      <div class="col-md-4">
+        <img src="../../assets/img/contacts01.png" alt="ImgContact">
+      </div>
+    </div>
 </div>
 
 <div class="titre-centree">

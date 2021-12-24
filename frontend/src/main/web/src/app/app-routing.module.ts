@@ -15,6 +15,7 @@ import { MainAdvicesComponent } from './main-advices/main-advices.component';
 import { MainContactsComponent } from './main-contacts/main-contacts.component';
 import { MainLoginComponent } from './main-login/main-login.component';
 import { MainLogoComponent } from './main-logo/main-logo.component';
+import { PolConfidentialComponent } from './pol-confidential/pol-confidential.component';
 
 const routes: Routes = [
   { path: 'navbar', component: TopNavComponent },
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'advices', component: MainAdvicesComponent },
   { path: 'contacts', component: MainContactsComponent },
   { path: 'login', component: MainLoginComponent },
-  { path: 'logo', component: MainLogoComponent }
+  { path: 'logo', component: MainLogoComponent },
+  { path: 'polconfidential', component: PolConfidentialComponent }
 ];
 
 @NgModule({

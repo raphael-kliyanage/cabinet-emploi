@@ -19,6 +19,7 @@ import { MainContactsComponent } from './main-contacts/main-contacts.component';
 import { MainLoginComponent } from './main-login/main-login.component';
 import { MainLogoComponent } from './main-logo/main-logo.component';
 import { RouterModule } from '@angular/router';
+import { PolConfidentialComponent } from './pol-confidential/pol-confidential.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RouterModule } from '@angular/router';
     MainAdvicesComponent,
     MainContactsComponent,
     MainLoginComponent,
-    MainLogoComponent
+    MainLogoComponent,
+    PolConfidentialComponent
   ],
   imports: [
     BrowserModule,

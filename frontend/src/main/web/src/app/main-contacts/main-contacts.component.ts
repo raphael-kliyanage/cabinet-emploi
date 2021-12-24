@@ -19,6 +19,7 @@ export class MainContactsComponent implements OnInit {
     this.workfunction = ['Sans Emploi','Etudiant','Employé'];
     //Create a new user object
     this.user = new User({
+      usersubject:"",
       userlastname:"",
       userfirstname:"",
       userworkfunction: this.workfunction[0],

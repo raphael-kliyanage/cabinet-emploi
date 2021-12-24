@@ -16,6 +16,7 @@ import { MainContactsComponent } from './main-contacts/main-contacts.component';
 import { MainLoginComponent } from './main-login/main-login.component';
 import { MainLogoComponent } from './main-logo/main-logo.component';
 import { PolConfidentialComponent } from './pol-confidential/pol-confidential.component';
+import { MLegalComponent } from './m-legal/m-legal.component';
 
 const routes: Routes = [
   { path: 'navbar', component: TopNavComponent },
@@ -32,7 +33,8 @@ const routes: Routes = [
   { path: 'contacts', component: MainContactsComponent },
   { path: 'login', component: MainLoginComponent },
   { path: 'logo', component: MainLogoComponent },
-  { path: 'polconfidential', component: PolConfidentialComponent }
+  { path: 'polconfidential', component: PolConfidentialComponent },
+  { path: 'mlegal', component: MLegalComponent }
 ];
 
 @NgModule({

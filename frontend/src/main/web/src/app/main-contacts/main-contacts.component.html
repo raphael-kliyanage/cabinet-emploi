@@ -104,7 +104,12 @@
             <div class="form-group">
               <label for="inputSub">Message</label>
               <input class="form-control" type="text" [(ngModel)]="user.usermessage" id="input" name="message" placeholder="Message" required>
+              <!-- reCaptcha -->
             </div>
+            <div class="form-group">
+                <button type="reset" class="btn btn-danger">Réinitialiser</button>
+                <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Envoyer</button>
+              </div>
           </form>
         </div>
       </div>

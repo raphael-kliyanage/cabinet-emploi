@@ -7,6 +7,7 @@ export class User {
     userphone!: number;
     userskype!: string;
     userinterviewdate!: string;
+    usersubject!:string;
     usermessage!: string;
     userfile!: string;
     //Both the type of interview are in a single object

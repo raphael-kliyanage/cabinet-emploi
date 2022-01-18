@@ -50,3 +50,7 @@ ul {
 .formulaire-commentaire {
 
 }
+
+#captcha {
+  color: red;
+}

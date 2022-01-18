@@ -1,0 +1,36 @@
+info:
+  version: ${project.version}
+app:
+  cors:
+    allowedOrigins: http://localhost:4200,http://localhost:8020
+  client:
+    baseUrl: http://localhost:8020/
+
+server:
+  port: 8020
+ 
+spring:
+  messages:
+    encoding: UTF-8
+    basename: i18n/messages
+  application:
+    name: cabinet
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 'toor'
+    username: root
+    url: jdbc:mysql://localhost:3306/cabinetEmploi?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false&zeroDateTimeBehavior=convertToNull
+
+logging:
+  file:
+  level:
+    org:
+      springframework: INFO
+    

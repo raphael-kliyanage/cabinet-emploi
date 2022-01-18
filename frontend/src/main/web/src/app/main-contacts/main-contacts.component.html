@@ -1,3 +1,24 @@
+<!-- reCaptcha's script -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+
+function get_action(form)
+{
+    var v = grecaptcha.getResponse();
+    if(v.length == 0)
+    {
+        document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+        return false;
+    }
+    else
+    {
+         document.getElementById('captcha').innerHTML="Captcha completed";
+        return true;
+    }
+}
+
+</script>
+
 <h3 class="titre-centree">Contact</h3>
 <!-- Page 15 -->
 <div class="container">
@@ -80,6 +101,45 @@
       <div class="col-md-4">
         <div class="formulaire-commentaire">
           <h4>Pour nous écrire :</h4>
+          <form class="form-horizontal" #signupForm="ngForm" action="http://localhost:8020" method="post"> <!-- on cible le service tomcat backend avec localhost:8020-->
+            <div class="form-group">
+              <label for="inputLastName">Nom:</label>
+              <input class="form-control" type="text" [(ngModel)]="user.userlastname" id="inputLastName" name="nom" placeholder="Nom" required>
+            </div>
+            <div class="form-group">
+              <label for="inputFirstName">Prénom:</label>
+              <input class="form-control" type="text" [(ngModel)]="user.userfirstname" id="inputFirstName" name="prenom" placeholder="Prénom" required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail">Email:</label>
+              <input class="form-control" type="text" [(ngModel)]="user.useremail" id="inputEmail" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <label for="inputPhone">Téléphone</label>
+              <input class="form-control" type="tel" [(ngModel)]="user.userphone" id="inputPhone" name="telephone" placeholder=" 0102030405 ">
+            </div>
+            <div class="form-group">
+              <label for="inputSubject">Sujet</label>
+              <input class="form-control" type="text" [(ngModel)]="user.usersubject" id="inputSubject" name="sujet" placeholder="Message" required>
+            </div>
+            <div class="form-group">
+              <label for="inputSub">Message</label>
+              <textarea class="form-control" maxlength="512" [(ngModel)]="user.usermessage" id="inputMessage" name="message" placeholder=" Message " required></textarea>
+              <!-- reCaptcha -->
+            </div>
+            <div class="form-group">
+<<<<<<< HEAD
+              <div class="g-recaptcha" id="rcaptcha"  data-sitekey="site key"></div>
+              <span id="captcha"></span>
+              <button type="reset" class="btn btn-danger">Réinitialiser</button>
+              <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Envoyer</button>
+            </div>
+=======
+                <button type="reset" class="btn btn-danger">Réinitialiser</button>
+                <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid">Envoyer</button>
+              </div>
+>>>>>>> edc48a90be3d00292baabf32bd813e0bd861ae74
+          </form>
         </div>
       </div>
       <!-- Image -->

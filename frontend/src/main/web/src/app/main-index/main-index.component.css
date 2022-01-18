@@ -2,3 +2,7 @@
     height: 200px;
     background: #aaa;
   }
+#page4 img{
+  height: auto;
+  width: initial;
+}
